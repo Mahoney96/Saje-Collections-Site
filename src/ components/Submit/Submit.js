@@ -1,10 +1,7 @@
 import Axios from "axios";
 import React, { useState, useEffect, Component } from "react";
 
-import axios from Axios;
-
-
-
+import axios from "axios";
 
 
 function SearchBar(){

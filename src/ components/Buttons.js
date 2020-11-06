@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import React, {Component, useState, useEffect} from "react";
 import { Switch, Router } from "react-router-dom";
 import axios from "axios";
@@ -22,3 +21,13 @@ const UserCart = (props ) => {
 
 // Need Button that brings user to view 
 
+
+const hoc = (MyComponent) => (props) => {
+    return (
+        <div>
+            <MyComponent {...props}>
+                {props.children.toUpperCase()}
+                </MyComponent> 
+        </div>
+    )
+}
