@@ -2,9 +2,18 @@ import axios from axios;
 
 
 
+module.exports =  {
+
+    
+
+
+
+
+}
+
 // UserCart Controllers // 
         // Logic/Functionality // 
-            // • user has personally cart.
+            // • user has personal cart.
             //  • user is able to add products from the store to their cart.
             //  • user can delete items from their cart. 
             //  • user can move items to ' Checkout '. 
@@ -22,5 +31,5 @@ const deleteFromCart = (id) => {
 }
 
 const updateCart = (id) => {
-    axios.get(`api/proudcts${id}`)
+    axios.get(`api/proudcts/${id}`)
 }
