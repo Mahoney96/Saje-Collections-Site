@@ -24,9 +24,8 @@ function SearchBar(){
 
             Submit</button>                                                 
         </div>
-    );
+    )
 
-
-}
+};
 
 export default SearchBar;

@@ -1,17 +1,9 @@
 require("dotenv").config();
 const { SESSION_SECRET, CONNECTION_STRING, SERVER_PORT } = process.env,
-express = require("express"),
+express = require("express");
 massive = require("massive"),
 session = require("express-session");
 
-// CONTROLLERS //
-
-
-// Cart // 
-
-// Admin //
-
-// Product //
 
 const app = express();
 
@@ -36,10 +28,22 @@ massive({
     connectionString: CONNECTION_STRING,
     ssl: {rejectUnathorized: false} 
 }).then(db => {
-    console.log('DB Up N Runnin Connected');
-    app.set('db', db);
+    app.set("db", db);
+    console.log("Database UP");
 });
 
+
+app.listen(SERVER_PORT, () => console.log(`Server is UP on ${SERVER_PORT} Aright Aright Aright`))
+
+
+// CONTROLLERS //
+
+
+// Cart // 
+
+// Admin //
+
+// Product //
 
 // second version of Massive install //
 
@@ -65,4 +69,3 @@ massive({
 
 // Checking Port //
 
-app.listen(SERVER_PORT, () => console.log(`Server is Up N Runnin on ${SERVER_PORT} Aright Aright Aright`))
