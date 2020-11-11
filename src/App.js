@@ -6,13 +6,16 @@ import HomePage from './ components/HomePage/HomePage'
 
 // Free Code Camp App setup example //
 
+
+// using 'Products' as naming convention could lead to issues with routiing from the backend. // => CHANGE ' Products ' to => 'Shop'
+   
 export default function App(){
   return (
     <main>
       <nav>
         <ul>
           <li><a href="/">HomePage</a></li>
-          <li><a href="/">Products</a></li>
+          <li><a href="/">Shop</a></li>
           <li><a href="/">Profile</a></li>
           <li><a href="/">About</a></li>
         </ul>
