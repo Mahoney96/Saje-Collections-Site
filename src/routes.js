@@ -1,4 +1,3 @@
-import { Router } from "express";
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
@@ -12,16 +11,6 @@ export default (
     </Switch>
 );
 
-
-export default function HomePage(){
-    return(
-        <Router>
-            <div> 
-                <ul></ul>
-            </div>
-        </Router>
-    )
-}
 
 
 // Paths needed for Header & Home Page //

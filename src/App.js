@@ -5,6 +5,7 @@ import Submit from './ components/Submit/Submit';
 import HomePage from './ components/HomePage/HomePage';
 import Shop from './ components/Shop/Shop';
 import Profile from './ components/Profile/Profile';
+import Dashboard from "./ components/DashBoard/DashBoard";
 
 
 
@@ -19,10 +20,10 @@ export default function App(){
     <main>
       <nav>
         <ul>
-          <li><a href="/">HomePage</a></li>
-          <li><a href="/">Shop</a></li>
-          <li><a href="/">Profile</a></li>
-          <li><a href="/">About</a></li>
+          <li><Shop/><a href="/">HomePage</a></li>
+          <li><HomePage/><a href="/">Shop</a></li>
+          <li><Dashboard/><a href="/">Profile</a></li>
+          <li><About/><a href="/">About</a></li>
         </ul>
       </nav>
     </main>

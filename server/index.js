@@ -55,6 +55,11 @@ app.listen(SERVER_PORT, () => console.log(`Server is UP on ${SERVER_PORT} Aright
 // })
 // .catch((err) => console.log(`Database error: ${err}`));
 
+
+// HomePage Endpoints // 
+
+
+
 // Cart Endpoints
 
 
