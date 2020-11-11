@@ -8,7 +8,7 @@ import React from "react";
 // 1) 
 // SimpleButton(aka an atom-like(simplest/smallest) component  for a button) //
     //Button in JSX in simplest terms //
-
+    
         //Opt-1 (uses state)
         <button onClick={() => this.setState({ count: this.state.count +1 })}>
             Click Me
@@ -23,35 +23,49 @@ import React from "react";
 
 
 // 2) //
-// (DUMB) HomePage Component //
+// (DUMB) Shop Component //
 
-export default Profile = () => {
+export default Shop = () => {
     return (
-        <div>Profile Page Title</div>
+        <div>
+            <h1>Shop Compt - Simply done</h1>
+        </div>
     )
 }
 
 
 
 // 3) //
-// (SMART) HomePage Component //
+// (SMART) Shop Component //
 
-export default Profile => class Profile extends User.Component {
-    render() {
+export default ShopPrest => class ShopPrest extends Other.Component {
+    return () {
         return (
-            <h1> User Profile Page</h1>
+            <h1> Title of About Page</h1>
         )
     }
 }
 
 
+// 3.5) Presentational Component //
 
+// presentational = pres. ; container = con.
+
+const ShopPrest = props => 
+(
+    <ul>
+        {props.ShopPrest.map(user => 
+            (<li>{Header}</li> )
+            (<li>{Products}</li> )
+        )}
+    </ul>
+)
 
 
 // 4) //
 // Counter() Component Functionality, Built in to count Button clicks // 
 
-class Profile extends React.Component{
+class About extends React.Component{
     constructor(props) {
         super(props);
         this.state = {value: 0 };

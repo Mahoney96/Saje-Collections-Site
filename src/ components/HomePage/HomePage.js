@@ -1,7 +1,29 @@
 import React, { Component } from "react";
 import HomePage from "../../routes";
+// import HomePage from "../../routes";
 
-// (DUMB) HomePage Component //
+
+// Steps 1-4 ( 1.Simple button, 
+//             2.DumbComp 
+//             3.SmartComp, 
+//             4.Imported counterFunction )
+// 1) 
+// SimpleButton(aka an atom-like(simplest/smallest) component  for a button) //
+    //Button in JSX in simplest terms //
+    
+        //Opt-1 (uses state)
+        <button onClick={() => this.setState({ count: this.state.count +1 })}>
+            Click Me
+            </button>;
+
+            //Opt-2 (uses a React Hook) (ref URL Link - https://reactjs.org/docs/hooks-state.html)
+            <button onClick={() => setCount(count + 1)}>
+                Click ME
+            </button>;
+
+
+// 2 //
+    // (DUMB) HomePage Component //
 
 export default HomePage => () => (
     <div>
@@ -9,11 +31,59 @@ export default HomePage => () => (
     </div>
 );
 
-
+// 3 //
 // (SMART) HomePage Component //
 
+export default HomePage => class HomePage extends Other.Component{
+    render(){
+        <div>
+            <HomeButton/>
+        </div>
+        return (
+            <div>
+                <h1>Title of HomePage</h1>
+                <DashBoard/>
+                <div>Nav</div>
+                <div>Shop</div>
+                <div>Profile</div>
+                <div>About</div>
+                <div>Contact</div>
+            </div>
+        );
+    }
+}
 
-export default HomePage => class M
+// 4 //
+// Counter() Component Functionality, Built in to count Button clicks // 
+
+class HomeButton extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {value: 0};
+        this.buttonClicked = 
+        this.buttonClicked.bind(this);
+    }
+
+      butttonClicked(event) {
+        this.setState({value:
+   this.state.value+1});  
+    }
+
+    render(){
+        return (
+            <div>
+                <div>{this.state.value}</div>
+                <button onClick= 
+    {this.buttonClicked}>Home</button>
+            </div>
+        );
+    }
+}
+
+
+
+
+
 
 
 
