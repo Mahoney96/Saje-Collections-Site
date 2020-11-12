@@ -12,6 +12,8 @@
 /build
 
 # misc
+resrc
+pathRsrc.js
 .env
 .DS_Store
 .env.local

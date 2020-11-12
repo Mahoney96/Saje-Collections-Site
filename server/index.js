@@ -1,14 +1,12 @@
-// require("dotenv").config();
+require("dotenv").config();
 
 const { default: HomePage } = require("../src/ components/HomePage/HomePage");
 
-// const { SESSION_SECRET, CONNECTION_STRING, SERVER_PORT } = process.env,
+const { SESSION_SECRET, CONNECTION_STRING, SERVER_PORT } = process.env,
 express = require("express");
-    // massive = require("massive"),
-    // session = require("express-session");
-    // const middle = require('./controllers/middleware') //Verifies the login in creds to DB, before allowing further event-access(views of DOM views that render for a registered users; Ex. - ' user cart ' , ' user's Dashboard ',  user's favorite items ' , )
-
-
+    massive = require("massive"),
+    session = require("express-session");
+    const middle = require('./controllers/middleware') //Verifies the login in creds to DB, before allowing further event-access(views of DOM views that render for a registered users; Ex. - ' user cart ' , ' user's Dashboard ',  user's favorite items ' , )
 
 
 const app = express();
@@ -16,27 +14,27 @@ const app = express();
 app.use(express.json());
 
 // using session as the request object // 
-// app.use(
-//     session({
-//         resave: false,
-//         saveUninitialized: true,
-//         secret: SESSION_SECRET,
-//         cookie: {
-//             maxAge: 1000 * 60 * 60 * 24 * 30,
-//         },
-//     })
-// );
+app.use(
+    session({
+        resave: false,
+        saveUninitialized: true,
+        secret: SESSION_SECRET,
+        cookie: {
+            maxAge: 1000 * 60 * 60 * 24 * 30,
+        },
+    })
+);
 
-// database setup // 
+// DATABASE SETUP // 
 
 
-// massive({
-//     connectionString: CONNECTION_STRING,
-//     ssl: {rejectUnathorized: false} 
-// }).then(db => {
-//     app.set("db", db);
-//     console.log("Database UP");
-// });
+massive({
+    connectionString: CONNECTION_STRING,
+    ssl: {rejectUnathorized: false} 
+}).then(db => {
+    app.set("db", db);
+    console.log("Database UP");
+});
 
 //PORT-CHECK//
 app.listen(SERVER_PORT, () => console.log(`Server is UP on ${SERVER_PORT} Aright Aright Aright`))
@@ -45,6 +43,13 @@ app.listen(SERVER_PORT, () => console.log(`Server is UP on ${SERVER_PORT} Aright
 // CONTROLLERS //
 
 // Cart // 
+
+    app.get("./api/users/id, .then => cart/ ") // logic is that it needs to go from a route that links to: 1st => the backend ' db ', 2nd => routes to the user's stored(saved) session-data, within the 'db'; then 2nd task is => sending a routing request to FILTER SAVED USER_SESSSION-DATA, SPECIFIC TO THAT USER => FOR EVENTS OF REQUESTS SAVED TO CART. So for requests sent to the 'db', for that specific registered user's saved session data (meaning going to need to bring express-session info(write within this controller, which will render in the DOM-View as a 'view-cart' presentational component, that will pull in(REDUX(stateful-functional components that will BE HANDLING THE EVENTS/FUNCTIONALITY of viewing, adding, editing, *BUYING*, ) ))) 
+    app.getCart("./")  // routing to represent: Get request to view the user's cart, and return any saved cart items   
+    app.postCart("./")  // routing to represent:
+    app.postCart("./")  // routing to represent:
+    app.putCart("./")  // routing to represent:
+    app.deleteCart("./")  // routing to represent:
 
 // Admin //
 
@@ -68,37 +73,29 @@ app.delete('/admin/login/user/id', admin.login.user.id)
 
 app.delete('/auth/product/id', auth.product.id)
 
-// Relative PATHS as of 11 - 11 - 2020 //
-
-    // #SERVER PATHS# // 
-
-//  index.js -              server/index.js
-//  AuthController.js-      server/controllers/AuthController.js
-
-// Guest Controller -  server/controllers/guestCartController.js
 
 
 
 
 
-// 
+// Server Setup with .json Database local not hosted //
 
-const express = require('express');
+// const express = require('express');
 
-// massive = require('massive');
-const ctrl = require('./controller.js');
-// console.log(shoes)
+// // massive = require('massive');
+// const ctrl = require('./controller.js');
+// // console.log(shoes)
 
-const app = express();  
+// const app = express();  
 
-app.use(express.json());  // Does what?: Parses the      javavscript into json so internet browsers can read it (or vice-versa*Look Up*) 
+// app.use(express.json());  // Does what?: Parses the      javavscript into json so internet browsers can read it (or vice-versa*Look Up*) 
 
-const SERVER_PORT = 3993;
+// const SERVER_PORT = 3993;
 
 
-app.get('/api/shoes',ctrl.getShoes) 
+// app.get('/api/shoes',ctrl.getShoes) 
 
-app.post('/api/shoes', ctrl.addShoe)
+// app.post('/api/shoes', ctrl.addShoe)
 
 
 
@@ -106,7 +103,7 @@ app.post('/api/shoes', ctrl.addShoe)
 
 
 
-app.listen(SERVER_PORT, () => console.log(`You're servers Ruunnin on ${SERVER_PORT} Aright Aright Aright`));
+// app.listen(SERVER_PORT, () => console.log(`You're servers Ruunnin on ${SERVER_PORT} Aright Aright Aright`));
 
 // app.post('/api/shoes')  // -- What are the 2 parts to this request?
                         // 1) the URL path/address: where retreiving the request from
