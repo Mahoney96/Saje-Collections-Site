@@ -10,7 +10,7 @@ import { Switch, Route } from "react-router-dom";
  )
 
 
-//Actual Rotiing to use //
+//Actual Routing to use for  //
 export default (
     <Switch>
     <Route exact path="/" component={HomePage} />
