@@ -1,6 +1,16 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+// proto routing to pull in backend //
 
+ export default (
+
+    <Switch>
+        
+    </Switch>
+ )
+
+
+//Actual Rotiing to use //
 export default (
     <Switch>
     <Route exact path="/" component={HomePage} />

@@ -38,8 +38,7 @@ export default DashBoard = () => {
 // (SMART) DashBoard Component //
 
 
-export default DashBoard =
-
+export default DashBoard
 
 
 

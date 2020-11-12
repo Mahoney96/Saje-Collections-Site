@@ -18,7 +18,7 @@ module.exports = {
         res.status(200).send(products)
     },
 
-    editProduct: (req, res ) => {
+    editProduct: (req, res, next ) => {
         const { name, price, description } = req.body;
         const {id } = req.params;
         const products = req.app.get("products");
@@ -29,8 +29,11 @@ module.exports = {
             description,
             product_id: id,
         });
+        console.log(`You edited product ${id}, and made ${edit_product}`) 
+            //logic behind console.log => Using ' next ' function to allow admin to see changes made to the product when rquesting change//
+        next();
         
-        res.status(200).send(products);
+        res.status(200).send(products.next); // Show the admin changes in console(will need to render changes after onto DOM, eventually)
     },
     deleteProduct: async (req, res ) => {
         const { id } = req.params;
