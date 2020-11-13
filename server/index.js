@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-const { default: HomePage } = require("../src/ components/HomePage/HomePage");
+
 
 const { SESSION_SECRET, CONNECTION_STRING, SERVER_PORT } = process.env,
 express = require("express");
@@ -26,8 +26,6 @@ app.use(
 );
 
 // DATABASE SETUP // 
-
-
 massive({
     connectionString: CONNECTION_STRING,
     ssl: {rejectUnathorized: false} 
@@ -44,34 +42,36 @@ app.listen(SERVER_PORT, () => console.log(`Server is UP on ${SERVER_PORT} Aright
 
 // Cart // 
 
-    app.get("./api/users/id, .then => cart/ ") // logic is that it needs to go from a route that links to: 1st => the backend ' db ', 2nd => routes to the user's stored(saved) session-data, within the 'db'; then 2nd task is => sending a routing request to FILTER SAVED USER_SESSSION-DATA, SPECIFIC TO THAT USER => FOR EVENTS OF REQUESTS SAVED TO CART. So for requests sent to the 'db', for that specific registered user's saved session data (meaning going to need to bring express-session info(write within this controller, which will render in the DOM-View as a 'view-cart' presentational component, that will pull in(REDUX(stateful-functional components that will BE HANDLING THE EVENTS/FUNCTIONALITY of viewing, adding, editing, *BUYING*, ) ))) 
-    app.getCart("./")  // routing to represent: Get request to view the user's cart, and return any saved cart items   
-    app.postCart("./")  // routing to represent:
-    app.postCart("./")  // routing to represent:
-    app.putCart("./")  // routing to represent:
-    app.deleteCart("./")  // routing to represent:
+//     app.get("./api/users/id, .then => cart/ ") // logic is that it needs to go from a route that links to: 1st => the backend ' db ', 2nd => routes to the user's stored(saved) session-data, within the 'db'; then 2nd task is => sending a routing request to FILTER SAVED USER_SESSSION-DATA, SPECIFIC TO THAT USER => FOR EVENTS OF REQUESTS SAVED TO CART. So for requests sent to the 'db', for that specific registered user's saved session data (meaning going to need to bring express-session info(write within this controller, which will render in the DOM-View as a 'view-cart' presentational component, that will pull in(REDUX(stateful-functional components that will BE HANDLING THE EVENTS/FUNCTIONALITY of viewing, adding, editing, *BUYING*, ) ))) 
+//     app.getCart("./")  // routing to represent: Get request to view the user's cart, and return any saved cart items   
+//     app.postCart("./")  // routing to represent:
+//     app.postCart("./")  // routing to represent:
+//     app.putCart("./")  // routing to represent:
+//     app.deleteCart("./")  // routing to represent:
 
-// Admin //
+// // Admin //
 
-// Product //
+// // Product //
 
 
-// ALL ENDPOINTS //
-// (Look Below for USER LOGIN End points) 
+// // ALL ENDPOINTS //
+// // (Look Below for USER LOGIN End points) 
 
-//ENDPOINTS (1 of 2) // the final destination view, that are the components combined, viewed into a specific path 
+// const { default: HomePage } = require("../src/ components/HomePage/HomePage");
 
-app.post('/homePage/guestUser/', HomePage.guest)   // Default view for viewers visiting Main-landing page. 
-            // HomePage will default to a non-registered userView by default.
-app.post('/homePage/auth/login/', HomePage ) // authenticate user view //
-app.post('/auth/register', auth.register)   // EXPLANATION - (1/"the routing path created" - axios creates, 2/ the url representing it)
-app.post('/auth/logout', auth.logout) 
-app.get('/auth/logout', auth.logout)
-app.get('/auth/user', auth.getUser)
+// //ENDPOINTS (1 of 2) // the final destination view, that are the components combined, viewed into a specific path 
 
-app.delete('/admin/login/user/id', admin.login.user.id)
+// app.post('/homePage/guestUser/', HomePage.guest)   // Default view for viewers visiting Main-landing page. 
+//             // HomePage will default to a non-registered userView by default.
+// app.post('/homePage/auth/login/', HomePage ) // authenticate user view //
+// app.post('/auth/register', auth.register)   // EXPLANATION - (1/"the routing path created" - axios creates, 2/ the url representing it)
+// app.post('/auth/logout', auth.logout) 
+// app.get('/auth/logout', auth.logout)
+// app.get('/auth/user', auth.getUser)
 
-app.delete('/auth/product/id', auth.product.id)
+// app.delete('/admin/login/user/id', admin.login.user.id)
+
+// app.delete('/auth/product/id', auth.product.id)
 
 
 
