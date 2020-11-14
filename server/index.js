@@ -40,6 +40,9 @@ app.listen(SERVER_PORT, () => console.log(`Server is UP on ${SERVER_PORT} Aright
 
 // CONTROLLERS //
 
+
+
+
 // Cart // 
 
 //     app.get("./api/users/id, .then => cart/ ") // logic is that it needs to go from a route that links to: 1st => the backend ' db ', 2nd => routes to the user's stored(saved) session-data, within the 'db'; then 2nd task is => sending a routing request to FILTER SAVED USER_SESSSION-DATA, SPECIFIC TO THAT USER => FOR EVENTS OF REQUESTS SAVED TO CART. So for requests sent to the 'db', for that specific registered user's saved session data (meaning going to need to bring express-session info(write within this controller, which will render in the DOM-View as a 'view-cart' presentational component, that will pull in(REDUX(stateful-functional components that will BE HANDLING THE EVENTS/FUNCTIONALITY of viewing, adding, editing, *BUYING*, ) ))) 

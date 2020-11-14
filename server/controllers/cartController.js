@@ -13,11 +13,6 @@ module.exports =  {
             </div>
         )
     }
-    
-
-
-
-
 }
 
 // UserCart Controllers // 
