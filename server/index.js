@@ -2,8 +2,8 @@ require("dotenv").config();
 
 
 
-const { SESSION_SECRET, CONNECTION_STRING, SERVER_PORT } = process.env,
-express = require("express");
+    const { SESSION_SECRET, CONNECTION_STRING, SERVER_PORT } = process.env,
+    express = require("express");
     massive = require("massive"),
     session = require("express-session");
     const middle = require('./controllers/middleware') //Verifies the login in creds to DB, before allowing further event-access(views of DOM views that render for a registered users; Ex. - ' user cart ' , ' user's Dashboard ',  user's favorite items ' , )

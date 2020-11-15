@@ -39,7 +39,7 @@ export default Shop = () => {
 // 3) //
 // (SMART) ShopPage Component //
 
-export default title => class ShopPage extends Other.Component {
+class ShopPage extends Component {
     render() {
         return (
             <h1>ShopPage Title</h1>
