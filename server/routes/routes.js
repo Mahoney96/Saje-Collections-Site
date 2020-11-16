@@ -2,21 +2,22 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 // proto routing to pull in backend //
 
- export default (
-
-    <Switch>
-        
-    </Switch>
- )
-
 
 //Actual Routing to use for  //
 export default (
     <Switch>
+    
     <Route exact path="/" component={HomePage} />
-    <Route path="/Admin" component={Admin} />
+    
     <Route path="/Guest" component={NonUser}/>
+    <Route path="/Admin" component={Admin} />
     <Route path="/User" component={RegUser}/>
+
+// Guest Cart 
+    <Route path="/Guest/Cart/ViewCart" component={ViewCart}/>
+    <Route path="/Guest/Cart/AddCartItem"/>
+
+    
     <Route path="/dash" component={dash}/>
     </Switch>
 );

@@ -3,31 +3,31 @@ import { Switch, Router } from "react-router-dom";
 import axios from "axios";
 import { connect } from "redux";
 
-// Create functional buttons for all of the http routes throughout the App // 
+// // Create functional buttons for all of the http routes throughout the App // 
 
-        // Allow for the buttons to repeatedly used, and MOST Importantly to be successfully used AS (props) of HOCs...Meaning I can start a component with the necessary change in state already occuring: 
-                //Change in state already occurring means that I'm able to reference through That  single '(props)' component, which will hold the Http: Route => the user will be directed to (think routuing will be with axios) 
-
-
-// Need Buttons for UserCart:
-
-const UserCart = (props ) => {
-    const [products, setProducts] = useState([]);
+//         // Allow for the buttons to repeatedly used, and MOST Importantly to be successfully used AS (props) of HOCs...Meaning I can start a component with the necessary change in state already occuring: 
+//                 //Change in state already occurring means that I'm able to reference through That  single '(props)' component, which will hold the Http: Route => the user will be directed to (think routuing will be with axios) 
 
 
-}
+// // Need Buttons for UserCart:
 
-// Button that brings user from current view to see their cart.
+// const UserCart = (props ) => {
+//     const [products, setProducts] = useState([]);
 
-// Need Button that brings user to view 
+
+// }
+
+// // Button that brings user from current view to see their cart.
+
+// // Need Button that brings user to view 
 
 
-const hoc = (MyComponent) => (props) => {
-    return (
-        <div>
-            <MyComponent {...props}>
-                {props.children.toUpperCase()}
-                </MyComponent> 
-        </div>
-    )
-}
+// const hoc = (MyComponent) => (props) => {
+//     return (
+//         <div>
+//             <MyComponent {...props}>
+//                 {props.children.toUpperCase()}
+//                 </MyComponent> 
+//         </div>
+//     )
+// }

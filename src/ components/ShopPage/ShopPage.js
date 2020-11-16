@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 
 // Steps 1-4 ( 1.Simple button, 
@@ -23,39 +23,24 @@ import React from "react";
 
 
 // 2) //
-// (DUMB) ShopPage Component //
+// NewUserCart Component // Presenational Component holding updates to UserCart => by rendering the changing storing ' user-session data ' here
 
-export default Shop = () => {
+NewUserCart = () => {
     return (
         <div>
-            <h1>ShopPage Title</h1>
+            <h1>Shop Compt - Simply done</h1>
         </div>
     )
 }
 
-
+export {NewUserCart};
 
 
 // 3) //
-// (SMART) ShopPage Component //
-
-class ShopPage extends Component {
-    render() {
-        return (
-            <h1>ShopPage Title</h1>
-        )
-    }
-}
-
-
-
-
-
-// 4) //
 // Counter() Component Functionality, Built in to count Button clicks // 
 
 
-class ShopPage extends React.Component{
+class ShopButton extends Component{
     constructor(props) {
         super(props);
         this.state = {value: 0 };
@@ -78,3 +63,35 @@ class ShopPage extends React.Component{
         );
     }
 }
+
+
+
+
+// 3) //
+// (SMART) exported Cart Component //
+
+class ShopPage extends Component {
+    render() {
+        return (
+            <h1>
+                
+                ShopPage Title
+            
+            <div className={ShopButton}/>
+            <NewUserCart/>
+            <button onClick={() => setCount(count + 1)}>
+                Click ME
+            </button>;
+
+            </h1>
+         
+        );
+    }
+};
+
+export default ShopPage;
+
+
+
+
+

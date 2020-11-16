@@ -25,7 +25,7 @@ import React from "react";
 // 2) //
 // (DUMB) Shop Component //
 
-export default Shop = () => {
+NewUserCart = () => {
     return (
         <div>
             <h1>Shop Compt - Simply done</h1>
@@ -38,7 +38,7 @@ export default Shop = () => {
 // 3) //
 // (SMART) Shop Component //
 
-export default ShopPrest => class ShopPrest extends Other.Component {
+class ShopPrest extends Component {
     return () {
         return (
             <h1> Title of About Page</h1>

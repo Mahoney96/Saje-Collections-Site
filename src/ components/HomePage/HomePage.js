@@ -1,6 +1,26 @@
 import React, { Component } from "react";
-import HomePage from "../../../server/routes/routes";
-// import HomePage from "../../routes";
+import UserCart from "../UserCart/UserCart";
+import ShopPage from "../ShopPage/ShopPage";
+import Login from "../Login.js";
+
+class HomePage extends Component{
+    render(){
+        return(
+
+
+        <div>
+        <ShopPage/>
+        <UserCart/>
+        <About/>
+        <Login>SIGN-IN OR SIGN UP</Login>
+        </div>
+        );
+
+    }
+};
+
+export default HomePage;
+
 
 
 

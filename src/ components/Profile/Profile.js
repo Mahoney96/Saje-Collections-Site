@@ -23,12 +23,13 @@ import React from "react";
 
 
 // 2) //
-// (DUMB) HomePage Component //
+// (DUMB) HomePage Component // - New User Profile: Adds a new set of data for a new user base on the following criteria:
+                                
 
-export default Profile = () => {
+const NewProfile = () => {
     return (
-        <div>Profile Page Title</div>
-    )
+        <div>New User Profile Page Title</div>
+    );
 }
 
 
@@ -36,7 +37,7 @@ export default Profile = () => {
 // 3) //
 // (SMART) HomePage Component //
 
-export default Profile => class Profile extends User.Component {
+class Profile extends User.Component {
     render() {
         return (
             <h1> User Profile Page</h1>
