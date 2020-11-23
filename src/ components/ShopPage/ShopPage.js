@@ -33,7 +33,7 @@ NewUserCart = () => {
     )
 }
 
-export {NewUserCart};
+NewUserCart();
 
 
 // 3) //
@@ -94,4 +94,11 @@ export default ShopPage;
 
 
 
+
+function newFunction() {
+    return( 
+        
+        <NewUserCart/>
+    );
+}
 

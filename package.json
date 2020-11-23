@@ -2,8 +2,13 @@
   "name": "saje-collections-site-1",
   "version": "0.1.0",
   "private": true,
-  "main": "./server/index.js",
+  "main": "./server/",
   "proxy":"http://localhost:3993",
+  "nodemon-Config":{
+    "ignore": [
+      "src*"
+    ]
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.0",
@@ -25,7 +30,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts-start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

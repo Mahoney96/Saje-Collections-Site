@@ -6,22 +6,24 @@ import session from "express-session";
 
 
 
-// class Auth extends Component {
-//     constructor(props){
-//         super(props);
-//         this.state = {
-//             email: "",
-//             username: "",
-//             password: "",
-//             error: ""
-//         }
-//     }
+class Auth extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            email: "",
+            username: "",
+            password: "",
+            error: ""
+        }
+    }
 
-//     handleInput = e => this.setState({ [e.target.name]: e.target.value})
+    handleInput = e => this.setState({ [e.target.name]: e.target.value})
 
-//     handleRegister = () => {
-//         const { e, password } = this.state;
+    handleRegister = () => {
+        const { e, password } = this.state;
         
-//         axios
-//         .post('/auth/register', {username})
-//     };
+        axios
+        .post('/auth/register', {username})
+    };
+
+    export default Auth;

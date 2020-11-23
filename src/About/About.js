@@ -38,53 +38,58 @@ NewUserCart = () => {
 // 3) //
 // (SMART) Shop Component //
 
-class ShopPrest extends Component {
+class About extends Component {
     return () {
         return (
+            <div>
+            {/* <AboutButton/> */}
             <h1> Title of About Page</h1>
-        )
+            </div>
+        );
     }
-}
+};
+
+export default About;
 
 
 // 3.5) Presentational Component //
 
 // presentational = pres. ; container = con.
 
-const ShopPrest = props => 
-(
-    <ul>
-        {props.ShopPrest.map(user => 
-            (<li>{Header}</li> )
-            (<li>{Products}</li> )
-        )}
-    </ul>
-)
+// const ShopPrest = props => 
+// (
+//     <ul>
+//         {props.ShopPrest.map(user => 
+//             (<li>{Header}</li> )
+//             (<li>{Products}</li> )
+//         )}
+//     </ul>
+// )
 
 
 // 4) //
 // Counter() Component Functionality, Built in to count Button clicks // 
 
-class About extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = {value: 0 };
-        this.buttonClicked = 
-        this.buttonClicked.bind(this);
-    }
+// class AboutButton extends React.Component{
+//     constructor(props) {
+//         super(props);
+//         this.state = {value: 0 };
+//         this.buttonClicked = 
+//         this.buttonClicked.bind(this);
+//     }
 
-        buttonClicked(event) {
-            this.setState({value:
-            this.state.value+1})
-        }
+//         buttonClicked(event) {
+//             this.setState({value:
+//             this.state.value+1})
+//         }
 
-    render(){
-        return (
-            <div>
-                <div>{this.state.value}</div>
-                <button onClick=
-    {this.buttonClicked}>Home</button>
-            </div>
-        );
-    }
-}
+//     render(){
+//         return (
+//             <div>
+//                 <div>{this.state.value}</div>
+//                 <button onClick=
+//     {this.buttonClicked}>Home</button>
+//             </div>
+//         );
+//     }
+// }

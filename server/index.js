@@ -2,9 +2,11 @@ require("dotenv").config();
 
 
 
-    const { SESSION_SECRET, CONNECTION_STRING, SERVER_PORT } = process.env,
+const { SESSION_SECRET, CONNECTION_STRING, SERVER_PORT } = process.env;
+
+// const SERVER_PORT = "https://localhost:3993";
     express = require("express");
-    massive = require("massive"),
+    massive = require("massive");
     session = require("express-session");
     const middle = require('./controllers/middleware') //Verifies the login in creds to DB, before allowing further event-access(views of DOM views that render for a registered users; Ex. - ' user cart ' , ' user's Dashboard ',  user's favorite items ' , )
 
@@ -14,16 +16,16 @@ const app = express();
 app.use(express.json());
 
 // using session as the request object // 
-app.use(
-    session({
-        resave: false,
-        saveUninitialized: true,
-        secret: SESSION_SECRET,
-        cookie: {
-            maxAge: 1000 * 60 * 60 * 24 * 30,
-        },
-    })
-);
+// app.use(
+//     session({
+//         resave: false,
+//         saveUninitialized: true,
+//         secret: SESSION_SECRET,
+//         cookie: {
+//             maxAge: 1000 * 60 * 60 * 24 * 30,
+//         },
+//     })
+// );
 
 // DATABASE SETUP // 
 massive({
@@ -35,7 +37,7 @@ massive({
 });
 
 //PORT-CHECK//
-app.listen(SERVER_PORT, () => console.log(`Server is UP on ${SERVER_PORT} Aright Aright Aright`))
+app.listen(SERVER_PORT, () => console.log(`Server is UP on ${SERVER_PORT} Aright Aright Aright`));
 
 
 // CONTROLLERS //
